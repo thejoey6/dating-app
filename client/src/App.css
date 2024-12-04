@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body, #root, .card, nav .nav-button, .dashboard .card-container, .swipe-card, .profile{
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: #00BFFF;
+  /* Gradient background */
+  background-image: linear-gradient(135deg, #0041C2, #C24100); /* blue to red-orange */
+  color: white; /* text color */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem; /*changed this value because there was an awkward mismatch at the bottom */
+  text-align: center;
+  overflow: hidden;
+}
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 4em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/*-----NAV BAR----- */
+
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -10px;
+  margin-bottom: 20px
+}
+
+nav .nav-title {
+  margin: 10px;
+  margin-top: -10px;
+}
+
+.nav-logo {
+  width: 115px;
+  height: 75px;
+  margin-right: 650px;
+  margin-top: -30px;
+}
+
+nav .nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav .nav-button {
+  color: white;
+  background-image: linear-gradient(135deg, #0041C2, #C24100); /* blue to red-orange */
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  margin-top: -10px;
+  white-space: nowrap;
+}
+
+nav .nav-button:hover {
+  background-image: linear-gradient(135deg, #0072ff, #ff7f00); /* New gradient on hover */
+}
+
+
+nav .nav-button:disabled {
+  background-color: #57638f;
+  color: white;
+}
+
+
+/*-------- Dashboard  --------*/
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.swipe-card {
+  position: absolute;
+}
+
+.dashboard .card-container {
+  width: 350px;
+  height: 500px;
+  user-select: none;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 460px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden; 
+  margin: 35px;
+  margin-top: 0px;
+}
+.card-content {
+  background-color: white;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card-content h2 {
+  margin: 0;
+  color: black;
+  font-size: 24px;
+}
+
+.card-content p {
+  margin: 5px 0 0;
+  color: gray;
+  font-size: 14px;
+}
+
+.no-cards-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 24px;
+  margin: auto;
+  margin-left: 40px;
+  width: 90%;
+}
+/*-----PROFILE-------*/
+.profile-container {
+  width: calc(100% - 32px);
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Profile Header */
+.profile-header {
+  font-size: 24px; /* 1.5rem */
+  font-weight: 700;
+  padding: 16px; /* 1rem */
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+/* Profile Form */
+.profile-form {
+  padding: 16px 32px; /* 1rem 2rem */
+}
+
+/* Profile Form Section */
+.profile-form-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px; /* 2rem */
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 32px; /* 2rem */
+}
+
+@media (min-width: 768px) {
+  .profile-form-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Profile Info */
+.profile-info-header {
+  font-size: 25px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.profile-info-text {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Profile Inputs */
+.profile-input-group {
+  margin-bottom: 24px;
+}
+
+.profile-label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.profile-input-wrapper {
+  position: relative;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  font-size: 14px;
+  color: #111827;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.profile-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  outline: none;
+}
+
+/* Photo Container */
+.photo-container {
+  position: relative;
+  margin-top: 10px;
+}
+
+.photo-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  overflow: hidden; /* Hide any parts of the image that exceed container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add some spacing between input and image */
+.profile-input-wrapper {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.profile-radio-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 60px;
+}
+
+.profile-radio-item {
+  display: flex;
+  align-items: center;
+}
+
+.profile-radio {
+  margin-right: 8px;
+  accent-color: #6366f1;
+}
+
+.profile-radio-label {
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+}
+
+/* Profile Submit Button */
+.profile-submit {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #6366f1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.profile-submit:hover {
+  background-color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.profile-submit:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.profile-submit:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4);
+}
+
+
+/*-------- Chat Container --------*/
+.chat-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 30%;
+  text-align: left;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.chat-container .chat-container-header {
+  background-image: linear-gradient(135deg, #0041C2, #C24100); /* blue to red-orange */
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+}
+
+.chat-container .header-back-arrow {
+  position: absolute;
+  left: 20px; 
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16pt;
+  cursor: pointer;
+}
+
+.profile-chat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chat-container .chat-container-header .img-container {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  width: 55px; 
+  height: 55px; 
+}
+
+.matches-chat-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.chat-container .chat-option {
+  border: none;
+  background-image: linear-gradient(135deg, #0041C2, #C24100); /* blue to red-orange */
+  border-bottom: solid 2px black;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 50px;
+  /* padding: 10px; */
+  box-shadow: black 0px 1px 4px 0px;
+}
+
+.chat-container .chat-option:hover {
+  background-image: linear-gradient(135deg, #0072ff, #ff7f00); /* New gradient on hover */
+}
+
+.chat-container .option:disabled {
+  border-bottom: solid 4px rgb(187, 187, 187);
+}
+
+.chat-container .profile,
+.chat-container .log-out-icon {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+/*Overlay for user's profile*/
+.chat-container .chat-container-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  border-radius: 50%; /* Match the image's border radius */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+.chat-container .chat-container-header .img-container:hover .overlay {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+.chat-container .overlay-text {
+  font-size: 1em;
+  text-align: center;
+}
+
+/*-------- Chat Display --------*/
+
+.chat-display {
+  margin-left: 10px;
+  padding: 0px;
+  height: 63vh;
+  overflow-y: auto;
+}
+
+/*incoming message*/
+.received-message-wrap {
+  padding: 3px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-content {
+  padding: 0px 10px;
+  color: black;
+  background-color: #dddddd; 
+  border-radius: 10px;
+  max-width: 60%; 
+  word-wrap: break-word;
+}
+/**/
+
+/*outgoing message*/
+.sent-message-wrap {
+  padding: 3px;
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.sent-message-wrap .message-content {
+  background-color: #007bff; 
+  color: white; 
+}
+
+.message-img-container {
+  width: 40px; /* Adjust the width of the circle */
+  height: 40px; /* Adjust the height of the circle */
+  border-radius: 50%; /* Makes the div a circle */
+  overflow: hidden; /* Hides the overflow */
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.message-img-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-container {
+  width: 60px; /* Adjust the width of the circle */
+  height: 60px; /* Adjust the height of the circle */
+  border-radius: 50%; /* Makes the div a circle */
+  overflow: hidden; /* Hides the overflow */
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  margin-right: 0px;
+}
+
+.img-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/*-------- Chat Input --------*/
+.chat-input {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------- Matches and Messages Display --------*/
+.matches-and-messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*-------- Matches Display --------*/
+.matches-display {
+  padding: 10px;
+  margin-bottom: 60px;
+  overflow-y: auto;
+}
+
+.section-header {
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  color: orangered;
+  font-weight: bold;
+}
+
+.matches-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.match-card {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.match-list-card {
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.match-list-card .img-container {
+  align-self: center;
+}
+
+.match-name {
+  font-size: 14px;
+  color: black;
+  margin-left: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.match-card:last-child {
+  margin-right: 0;
+}
+
+.matches-list .img-container {
+  position: relative;
+}
+
+/*Overlay for list of matches*/
+.matches-list .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  border-radius: 50%; /* Match the image's border radius */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+.chat-container .matches-list .img-container:hover .overlay {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+/*-------- Chat List Display --------*/
+.chat-list-display {
+  padding: 0px;
+  height: 60vh;
+  margin-top: -50px;
+  margin-left: 10px;
+  overflow-y: auto;
+}
+
+.chats-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.match-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0; /* Light gray line between chat items */
+}
+
+.message-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.list-match-name {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+}
+
+.prompt-message {
+  font-size: 12px;
+  color: gray;
+  margin: 2px 0 0;
+}
+
+/*View Profile*/
+.view-profile {
+  color: black;
+}
+
+.whole .image-container{
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  height: 50vh;
+  position: relative;
+}
+
+.ProfileImage{
+  max-width: 100%;        /* Ensures the image does not overflow the container */
+  max-height: 100%;  
+  object-fit: cover;      
+}
+
+/*help me style this shit please*/
+.arrow {
+  position: absolute;
+  transform: translateY(-40%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;             /* Ensures arrows are above the image */
+  font-size: 18px;         /* Increases arrow size */
+}
+
+.left-arrow {
+  left: 10px;              /* Positions the left arrow */
+}
+
+.right-arrow {
+  right: 10px;             /* Positions the right arrow */
+}
+
+
+/*---------PROMPTS------------*/
+
+.CustomPrompts{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  /* justify-content: center; Centers horizontally */
+  align-items: center;    /* Centers vertically */
+}
+
+.PromptContainer{
+  background-image: linear-gradient(135deg, #0041C2, #C24100); /* blue to red-orange */
+  /* border:2px solid #7d8cc4; */
+  border-radius: 20px;
+  /*padding: 20px;*/
+  color: white;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.Prompt{
+  font: caption;
+  font-weight: 10;
+  font-size: 13px;
+  margin: 14px 0px 8px 10px;
+}
+
+.PromptDetail{
+  margin: 0px 10px 10px 20px;
+  font-size: 20px;
+  padding: 0px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.additional-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 100%;        /* Ensures the image does not overflow the container */
+  max-height: 100%;
+}
+
+.additional-profile-image {
+  max-width: 100%;        /* Ensures the image does not overflow the container */
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
