@@ -33,7 +33,7 @@ MongoDB, Express.js, React.js, Node.js
 BruinDate was made as the final project for CS 35L taught by Professor Paul Eggert at UCLA in Spring 2024. Made by: Andrew Sun, Brian Brito, Catherine Di, Joseph Read, Melody Myae.
 
 # Photos
-
+```
 ## Login/Register Page
 
 ## ![Screenshot 2024-12-04 150206](https://github.com/user-attachments/assets/00f2e04c-4cc4-4018-8f0f-4ac7c0123ec4)
@@ -61,3 +61,4 @@ BruinDate was made as the final project for CS 35L taught by Professor Paul Egge
 ## Profile-View (Swiping left/right) Widget
 
 ![Screenshot 2024-12-04 151547](https://github.com/user-attachments/assets/a01ccbf2-534b-42b1-8dbe-7e703d7d5ff2)
+```
