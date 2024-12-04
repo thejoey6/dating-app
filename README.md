@@ -36,7 +36,7 @@ BruinDate was made as the final project for CS 35L taught by Professor Paul Egge
 
 ## Login/Register Page
 
-![Screenshot 2024-12-04 150206](https://github.com/user-attachments/assets/00f2e04c-4cc4-4018-8f0f-4ac7c0123ec4)
+## ![Screenshot 2024-12-04 150206](https://github.com/user-attachments/assets/00f2e04c-4cc4-4018-8f0f-4ac7c0123ec4)
 
 
 
