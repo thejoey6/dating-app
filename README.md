@@ -16,8 +16,8 @@ BruinDate is a browser dating app
     ```
 2. Add `.env` to the 'server' directory with the following text:
     ```env
-    ATLAS_URI=
-    JWT_SECRET=
+    ATLAS_URI= [Your own MongoDB Database here]
+    JWT_SECRET= [Your own JWT Secret here]
     ```
 3. Open CMD Prompt, run 'cd /server', and run 'npm install' to install all backend dependencies.
 5. run 'npm start' to start the server. Leave CMD Prompt open.
